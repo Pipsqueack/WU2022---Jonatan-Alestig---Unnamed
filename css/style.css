@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    z-index: 2;
 }
 
 body {
@@ -12,12 +13,11 @@ body {
 }
 
 header {
-    height: 20vh;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(255, 227, 191);
     display: grid;
     grid-template-columns: 0.2fr 1fr 70px;
-    grid-template-rows: 8vh 8vh;
+    grid-template-rows: 8vh 14vh;
     grid-template-areas: 
     "he . bu"
     "bo bo bo";
@@ -29,7 +29,7 @@ header > h2 {
     font-weight: bold;
     grid-area: he;
     font-size: 1.7rem;
-    margin-top: 5px;
+    margin-top: 35px;
     margin-left: 20px;
     left: 0px;
 }
@@ -42,7 +42,7 @@ header > h2 {
     color: rgb(255, 227, 191);
     grid-area: bo;
     margin: 25px;
-    margin-top: 5px;
+    margin-top: 45px;
     margin-bottom: 5px;
     font-size: 1.5rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -64,11 +64,11 @@ nav {
     background-color: rgb(243, 211, 169);
     position: absolute;
     top: -100vh;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     list-style: none;
     transition: all 0.5s;
-    z-index: 2;
+    z-index: 3;
 }
 
 .nav_active {
@@ -93,8 +93,8 @@ a {
 
 .burger_line {
     background-color: black;
-    width: 25px;
-    height: 3px;
+    width: 28px;
+    height: 3.5px;
     margin: 3px;
     border-radius: 10%;
     transition: all 0.5s;
@@ -105,8 +105,8 @@ a {
     display: flex;
     flex-direction: column;
     z-index: 3;
-    margin-bottom: 18px;
-    margin-left: 10px;
+    margin-bottom: -5px;
+    margin-left: -40px;
 }
 
 .crossed_line #line_2 {
@@ -123,11 +123,11 @@ a {
 
 #main_container {
     background-color: rgb(255, 227, 191);
-    height: 250vh;
+    height: 220vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 #logo {
@@ -188,10 +188,66 @@ article > img {
 
 .colorBlock {
     background-color: rgb(233, 81, 109);
-    width: 100vw;
-    height: 60vh;
+    width: 100%;
+    height: 122vh;
+    top: 63vh;
     position: absolute;
-    top: 80vh;
     z-index: 1;
 }
 
+#namesContainer {
+    width: 100%;
+    bottom: 0vh;
+    right: -8px;
+    position: absolute;
+    
+}
+
+#names {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.8fr 0.2fr 0.8fr 0.2fr 0.8fr;
+    grid-template-areas: 
+    "n1 n2"
+    ". ."
+    "n3 n4"
+    ". ."
+    "n5 n6"
+    ". ."
+    ;
+}
+
+#name1 {
+    grid-area: n1;
+}
+
+#name2 {
+    grid-area: n2;
+}
+
+#name3 {
+    grid-area: n3;
+}
+
+#name4 {
+    grid-area: n4;
+}
+
+#name5 {
+    grid-area: n5;
+}
+
+#name6 {
+    grid-area: n6;
+}
+
+ul > section {
+    margin-bottom: 180px;
+}
+
+
+ul {
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+}
