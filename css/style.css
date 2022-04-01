@@ -9,6 +9,10 @@ body {
     display: flex;
     position: absolute;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 227, 191);
+
 }
 
 header {
@@ -23,13 +27,13 @@ header {
     text-align: center;
 }
 
-header > h2 {
+header > a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     grid-area: he;
-    font-size: 1.7rem;
-    margin-top: 35px;
-    margin-left: 20px;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-left: 25px;
     left: 0px;
 }
 
@@ -47,6 +51,7 @@ header > h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bolder;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 nav {
@@ -59,10 +64,10 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 325vh;
+    height: 340vh;
     background-color: rgb(243, 211, 169);
     position: absolute;
-    top: -325vh;
+    top: -340vh;
     width: 100%;
     align-items: center;
     list-style: none;
@@ -105,7 +110,6 @@ a {
     flex-direction: column;
     z-index: 4;
     margin-bottom: -5px;
-    margin-left: -40px;
 }
 
 .crossed_line #line_2 {
@@ -122,7 +126,6 @@ a {
 
 #main_container {
     background-color: rgb(255, 227, 191);
-    height: 300vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -130,13 +133,14 @@ a {
     z-index: 0;
 }
 
-#logo {
-    margin-top: 45px;
+.logo {
+    margin-top: 60px;
     margin-left: 40px;
+    margin-bottom: 40px;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 5px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -144,66 +148,62 @@ h1 {
 p {
     font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
+    font-size: 1rem;
+    margin: 40px;
     margin-top: 20px;
     word-spacing: 1px;
     letter-spacing: 1px;
 }
 
 .articleContainer {
-    margin-top: 50px;
+    width: 100%;
+    margin-top: 70px;
     height: 200px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
-    position: relative;
-    margin-left: 5px;
-    margin-right: 5px;
+    background-color: rgb(233, 81, 109);
 }
 
 article {
     background-color: black;
     border-radius: 10px;
-    height: 220px;
-    width: 230px;
+    height: 190px;
+    width: 480px;
     margin: 5px;
     display: flex;
     z-index: 2;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
 }
 
 article > a {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    width: 100px;
     color: rgb(255, 227, 191);
-    margin-top: 8px;
-    margin-bottom: 7px;
-    margin-right: 110px;
     letter-spacing: -0.5px;
-    font-size: 0.83rem;
+    font-size: 0.85rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 article > img {
+    position: relative;
+    left: 3px;
+    top: 8px;
     border-radius:8px;
-    width: 98.3%; 
+    width: 97.5%; 
     height: 84.7%;
 }
 
 
-.colorBlock {
-    background-color: rgb(233, 81, 109);
-    width: 100%;
-    height: 155vh;
-    top: 63vh;
-    position: absolute;
-    z-index: 1;
-}
-
 #namesContainer {
+    background-color: rgb(233, 81, 109);
     text-align: center;
+    position: relative;
     width: 100%;
-    height: 143vh;
-    margin-top: 60px;
 }
 
 #portraits {
@@ -246,17 +246,193 @@ article > img {
 }
 
 .portrait {
-    width: 200px;
-    height: 200px;
+    width: 40vw;
+    height: 40vw;
 }
 
 #namesContainer > h2 {
-    font-size: 1.8rem;
-    margin-top: 10px;
-    margin-bottom:70px;
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom:50px;
+}
+
+#namesContainer > h3 {
+    display: none;
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    left: 7vw;
+    font-size: 120%;
+    height: 70vw;
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 227, 191);
+    width: 100%;
 }
 
 footer > h2 {
+    width: 100px;
     margin: 10px;
     text-align: center;
+}
+
+footer > p {
+    text-align: center;
+}
+
+footer > h1 {
+    margin-top: 40px;
+}
+
+#bookUsText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    background-color: black;
+    color: rgb(255, 227, 191);
+    margin-top: 60px;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    border-radius: 10px;
+
+}
+
+#mediaLinks {
+    width: 56vw;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#spotify {
+    height: 60px;
+}
+
+#soundcloud {
+    height: 62px;
+}
+
+#insta {
+    height: 60px;
+}
+
+#mail {
+    height: 60px;
+}
+
+.mediaIcon {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+    header > h2 {
+        font-size: 1.55rem;
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    .burger_line {
+        display: none;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .articleContainer {
+        height: 50vw;        
+        margin-top: 60px;
+    }
+    article {
+        margin-top: 20px;
+        width: 40vw;
+        height: 40vw;
+    }
+
+    #namesContainer > h3 {
+        display: block;
+    }
+
+    #nav_links {
+        position: initial;
+        margin-top: 5vh;
+        height: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+
+    li > a {
+        font-size: 1.2rem;
+        margin-right: 35px;
+    }
+    #bookUs {
+        height: 60px;
+        font-size: 1.3rem;
+        width: 300px;
+        padding: 9px;
+        text-align: end;
+    }
+    .portrait {
+        width: 20vw;
+        height: 20vw;
+    }
+
+  }
+
+#right {
+    text-align: right;
+    margin-right: 15vw;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+#releasesText {
+    margin-top: 70px;
+}
+
+article > h3 {
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    width: 100px;
+    color: rgb(255, 227, 191);
+    letter-spacing: -0.5px;
+    font-size: 0.85rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.yellow {
+    background-color: rgb(255, 176, 112);
+}
+
+.black {
+    background-color: rgb(29, 29, 29);
+}
+
+.noMargin {
+    margin-top: 0px;
+}
+
+#center {
+    text-align: center;
+    margin-left: 0;
+}
+
+#shiftRight {
+    margin-left: 10vw;
 }
