@@ -10,7 +10,6 @@ body {
     position: absolute;
     flex-direction: column;
     width: 100%;
-    height: 100%;
     background-color: rgb(255, 227, 191);
 
 }
@@ -19,7 +18,6 @@ header {
     width: 100%;
     background-color: rgb(255, 227, 191);
     display: grid;
-    grid-template-columns: 0.2fr 1fr 70px;
     grid-template-rows: 8vh 14vh;
     grid-template-areas: 
     "he . bu"
@@ -31,20 +29,21 @@ header > a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     grid-area: he;
-    font-size: 1.5rem;
-    margin-top: 15px;
+    font-size: 4.5vw;
+    margin-top: 40px;
     margin-left: 25px;
     left: 0px;
 }
 
 #bookUs {
+    margin-left: 6%;
+    width: 88%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     color: rgb(255, 227, 191);
     grid-area: bo;
-    margin: 25px;
     margin-top: 45px;
     margin-bottom: 5px;
     font-size: 1.5rem;
@@ -61,13 +60,14 @@ nav {
 }
 
 #nav_links {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 340vh;
+    height: 100%;
     background-color: rgb(243, 211, 169);
     position: absolute;
-    top: -340vh;
+    top: -100%;
     width: 100%;
     align-items: center;
     list-style: none;
@@ -76,7 +76,7 @@ nav {
 }
 
 .nav_active {
-    transform: translate(0, 325vh);
+    transform: translate(0, 100%);
 }
 
 a {
@@ -105,6 +105,7 @@ a {
 }
 
 #burger {
+    margin-right: 15px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -135,7 +136,7 @@ a {
 
 .logo {
     margin-top: 60px;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-bottom: 40px;
 }
 
@@ -148,9 +149,9 @@ h1 {
 p {
     font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
-    font-size: 1rem;
-    margin: 40px;
-    margin-top: 20px;
+    font-size: 0.85rem;
+    margin-left: 20px;
+    margin-right: 20px;
     word-spacing: 1px;
     letter-spacing: 1px;
 }
@@ -158,9 +159,10 @@ p {
 .articleContainer {
     width: 100%;
     margin-top: 70px;
-    height: 200px;
+    height: 100%;
     padding: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
     background-color: rgb(233, 81, 109);
@@ -169,9 +171,8 @@ p {
 article {
     background-color: black;
     border-radius: 10px;
-    height: 190px;
-    width: 480px;
-    margin: 5px;
+    width: 90vw;
+    margin: 20px;
     display: flex;
     z-index: 2;
     flex-direction: column;
@@ -292,6 +293,7 @@ footer > h1 {
 
 #bookUsText {
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -307,7 +309,6 @@ footer > h1 {
 }
 
 #mediaLinks {
-    width: 56vw;
     margin-top: 40px;
     margin-bottom: 25px;
     display: flex;
@@ -335,61 +336,6 @@ footer > h1 {
     cursor: pointer;
 }
 
-@media screen and (min-width: 1000px) {
-    header > h2 {
-        font-size: 1.55rem;
-        margin-left: 10px;
-        margin-top: 0px;
-    }
-    .burger_line {
-        display: none;
-    }
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .articleContainer {
-        height: 50vw;        
-        margin-top: 60px;
-    }
-    article {
-        margin-top: 20px;
-        width: 40vw;
-        height: 40vw;
-    }
-
-    #namesContainer > h3 {
-        display: block;
-    }
-
-    #nav_links {
-        position: initial;
-        margin-top: 5vh;
-        height: 100%;
-        flex-direction: row;
-        justify-content: flex-end;
-        background-color: transparent;
-    }
-
-    li > a {
-        font-size: 1.2rem;
-        margin-right: 35px;
-    }
-    #bookUs {
-        height: 60px;
-        font-size: 1.3rem;
-        width: 300px;
-        padding: 9px;
-        text-align: end;
-    }
-    .portrait {
-        width: 20vw;
-        height: 20vw;
-    }
-
-  }
-
 #right {
     text-align: right;
     margin-right: 15vw;
@@ -398,6 +344,7 @@ footer > h1 {
 .center {
     text-align: center;
     width: 100%;
+    margin-top: 55px;
 }
 
 #releasesText {
@@ -409,18 +356,27 @@ article > h3 {
     position: relative;
     top: 5px;
     left: 10px;
-    width: 100px;
     color: rgb(255, 227, 191);
     letter-spacing: -0.5px;
-    font-size: 0.85rem;
+    font-size: 5vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer > h3 {
+    text-align: center;
+    width: 100%;
 }
 
 .yellow {
     background-color: rgb(255, 176, 112);
 }
 
-.black {
+#black {
     background-color: rgb(29, 29, 29);
 }
 
@@ -436,3 +392,140 @@ article > h3 {
 #shiftRight {
     margin-left: 10vw;
 }
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.galleryImg {
+    margin-top: 9%;
+    width: 30vw;
+    height: 90%;
+}
+
+.textContainer {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: rgba(80, 185, 255, 0.596);
+}
+
+.textContainer > img {
+    width: 80vw;
+    margin: 60px;
+    margin-bottom: 30px;
+}
+
+.textContainer > p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+    p {
+        font-size: 1rem;
+    }
+
+    #mediaLinks {
+        width: 60%;
+    }
+
+    header > a {
+        font-size: 2.8vw;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    header > h2 {
+        font-size: 1.55rem;
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    .burger_line {
+        display: none;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    header {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .articleContainer {
+        flex-direction: row;
+        height: 50vw;        
+        margin-top: 60px;
+    }
+    article {
+        margin-top: 20px;
+        width: 40vw;
+        height: 40vw;
+    }
+
+    #namesContainer > h3 {
+        display: block;
+    }
+
+    #nav_links {
+        width: 60%;
+        position: initial;
+        text-align: center;
+        height: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+
+
+    li > a {
+        font-size: 1.2rem;
+        margin-right: 35px;
+        position: relative;
+        top: 50%;
+    }
+    #bookUs {
+        margin-left: 0;
+        margin-right: 20px;
+        height: 60px;
+        font-size: 1.3rem;
+        width: 300px;
+        text-align: end;
+    }
+    .portrait {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    article > h3 {
+        font-size: 2rem;
+    }
+
+    .textContainer {
+        flex-direction: row;
+    }
+
+    .textContainer > img {
+        height: 20vw;
+        margin: 20px;
+    }
+
+  }
+
