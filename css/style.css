@@ -165,8 +165,11 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
-    background-color: rgb(233, 81, 109);
+    background-color: rgb(238, 114, 137);
 }
+
+
+
 
 article {
     background-color: black;
@@ -201,7 +204,7 @@ article > img {
 
 
 #namesContainer {
-    background-color: rgb(233, 81, 109);
+    background-color: rgb(238, 114, 137);
     text-align: center;
     position: relative;
     width: 100%;
@@ -372,13 +375,7 @@ footer > h3 {
     width: 100%;
 }
 
-.yellow {
-    background-color: rgb(255, 176, 112);
-}
 
-#black {
-    background-color: rgb(29, 29, 29);
-}
 
 .noMargin {
     margin-top: 0px;
@@ -389,8 +386,12 @@ footer > h3 {
     margin-left: 0;
 }
 
-#shiftRight {
+.shiftRight {
     margin-left: 10vw;
+}
+
+#shiftRightExtra {
+    margin-left: 15vw;
 }
 
 li {
@@ -402,21 +403,21 @@ li {
 
 .galleryImg {
     margin-top: 9%;
-    width: 30vw;
+    width: 75vw;
     height: 90%;
 }
 
 .textContainer {
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     height: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
-    background-color: rgba(80, 185, 255, 0.596);
+    background-color: transparent;
 }
 
 .textContainer > img {
@@ -430,10 +431,19 @@ li {
     margin-bottom: 30px;
 }
 
+.textContainer:hover {
+    background-color: burlywood;
+    transition: ease 0.8s;
+}
+
 h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px;
     font-size: 2rem;
+}
+
+.black {
+    background-color: rgb(29, 29, 29);
 }
 
 @media screen and (min-width: 1000px) {
@@ -478,6 +488,12 @@ h2 {
         margin-top: 20px;
         width: 40vw;
         height: 40vw;
+    }
+
+    .galleryImg {
+        margin-top: 9%;
+        width: 30vw;
+        height: 90%;
     }
 
     #namesContainer > h3 {
