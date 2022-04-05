@@ -76,6 +76,7 @@ nav {
 }
 
 a {
+    display: flex;
     font-family: 'Inconsolata', monospace;
     text-decoration: none;
     color: black;
@@ -169,6 +170,12 @@ p {
     margin-bottom: 40px;
 }
 
+#footerLogo {
+
+    width: 60%;
+    margin-top: 20px;
+}
+
 .mainLogo {
     width: 75%;
 }
@@ -177,6 +184,7 @@ article {
     background-color: black;
     border-radius: 10px;
     width: 90vw;
+    height: 60vw;
     margin: 20px;
     display: flex;
     z-index: 2;
@@ -326,7 +334,7 @@ footer > h1 {
 }
 
 #mediaLinks {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 25px;
     display: flex;
     align-items: center;
@@ -355,17 +363,16 @@ footer > h1 {
 
 #right {
     text-align: right;
-    margin-right: 20vw;
+    margin-right: 10vw;
 }
 
 #rightLess {
     text-align: right;
-    margin-right: 25vw;
+    margin-right: 15vw;
 }
 
 .center {
     text-align: center;
-    width: 100%;
     margin-top: 55px;
 }
 
@@ -380,7 +387,7 @@ article > h3 {
     left: 10px;
     color: rgb(255, 227, 191);
     letter-spacing: -0.5px;
-    font-size: 5vw;
+    font-size: 3.7vw;
     font-family: 'Inconsolata', monospace;
 }
 
@@ -467,6 +474,8 @@ h2 {
     background-color: rgb(29, 29, 29);
 }
 
+
+
 @media screen and (min-width: 1000px) {
     p {
         font-size: 1rem;
@@ -502,13 +511,13 @@ h2 {
     }
     .articleContainer {
         flex-direction: row;
-        height: 50vw;        
+        height: 45vw;        
         margin-top: 60px;
     }
     article {
         margin-top: 20px;
         width: 40vw;
-        height: 40vw;
+        height: 30vw;
     }
 
     .galleryImg {
@@ -570,5 +579,18 @@ h2 {
         width: 30vw;
     }
 
+    #right {
+        text-align: right;
+        margin-right: 20vw;
+    }
+    
+    #rightLess {
+        text-align: right;
+        margin-right: 25vw;
+    }
+
   }
 
+.galleryHeight {
+    height: 35vw;
+}
